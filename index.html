@@ -6,14 +6,14 @@
     <title>2025년 오픈소스 생태계 내 생성형 AI의 통합</title>
     <style>
         :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --accent-color: #3b82f6;
-            --bg-color: #f8fafc;
-            --text-color: #1e293b;
+            --primary-color: #dc2626;
+            --secondary-color: #047857;
+            --accent-color: #d97706;
+            --bg-color: #fef7f7;
+            --text-color: #1f2937;
             --card-bg: #ffffff;
-            --border-color: #e2e8f0;
-            --code-bg: #f1f5f9;
+            --border-color: #fca5a5;
+            --code-bg: #fef3c7;
         }
 
         * {
@@ -31,16 +31,41 @@
 
         /* 헤더 */
         header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
             color: white;
             padding: 80px 20px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* 눈송이 애니메이션 */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: rgba(255, 255, 255, 0.8);
+            animation: snowfall linear infinite;
+            font-size: 1rem;
+        }
+        
+        @keyframes snowfall {
+            0% { transform: translateY(-10px) rotate(0deg); }
+            100% { transform: translateY(calc(100vh + 10px)) rotate(360deg); }
         }
 
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
             font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header h1::before {
+            content: '🎄 ';
+        }
+        
+        header h1::after {
+            content: ' 🎄';
         }
 
         header p {
@@ -121,11 +146,12 @@
 
         /* 강조 박스 */
         .highlight-box {
-            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            background: linear-gradient(135deg, #fef7f7 0%, #fecaca 100%);
             border-left: 4px solid var(--accent-color);
             padding: 20px 25px;
             margin: 20px 0;
             border-radius: 0 12px 12px 0;
+            box-shadow: 0 2px 8px rgba(220, 38, 38, 0.1);
         }
 
         .highlight-box ul {
@@ -166,7 +192,7 @@
         }
 
         tr:hover {
-            background: #e0e7ff;
+            background: #fecaca;
         }
 
         /* 키워드 태그 */
@@ -178,6 +204,7 @@
             border-radius: 15px;
             font-size: 0.85rem;
             margin: 2px;
+            box-shadow: 0 2px 4px rgba(217, 119, 6, 0.3);
         }
 
         /* 경고 박스 */
@@ -206,7 +233,7 @@
         }
 
         .conclusion h3 {
-            color: #93c5fd;
+            color: #fbbf24;
         }
 
         .conclusion .highlight-box {
@@ -285,18 +312,27 @@
 <body>
     <header>
         <h1>2025년 오픈소스 생태계 내 생성형 AI의 통합</h1>
-        <p>보조자에서 자율적 운영체제로의 진화 — AI가 이끄는 오픈소스의 새로운 패러다임</p>
+        <p>🎅 보조자에서 자율적 운영체제로의 진화 — AI가 이끄는 오픈소스의 새로운 패러다임 ❄️</p>
+        <div class="snowflake" style="left: 10%; animation-duration: 3s; animation-delay: 0s;">❄️</div>
+        <div class="snowflake" style="left: 20%; animation-duration: 4s; animation-delay: 1s;">❅</div>
+        <div class="snowflake" style="left: 30%; animation-duration: 3.5s; animation-delay: 0.5s;">❄️</div>
+        <div class="snowflake" style="left: 40%; animation-duration: 5s; animation-delay: 1.8s;">❅</div>
+        <div class="snowflake" style="left: 50%; animation-duration: 4.5s; animation-delay: 1s;">❄️</div>
+        <div class="snowflake" style="left: 60%; animation-duration: 3s; animation-delay: 2s;">❅</div>
+        <div class="snowflake" style="left: 70%; animation-duration: 4s; animation-delay: 0.2s;">❄️</div>
+        <div class="snowflake" style="left: 80%; animation-duration: 3.8s; animation-delay: 1.5s;">❅</div>
+        <div class="snowflake" style="left: 90%; animation-duration: 4.2s; animation-delay: 0.8s;">❄️</div>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#intro">서론</a></li>
-            <li><a href="#governance">인지적 거버넌스</a></li>
-            <li><a href="#operations">운영의 지능화</a></li>
-            <li><a href="#agent-dev">에이전트 개발자</a></li>
-            <li><a href="#mcp">MCP 표준화</a></li>
-            <li><a href="#inference">추론의 민주화</a></li>
-            <li><a href="#conclusion">결론</a></li>
+            <li><a href="#intro">🎯 서론</a></li>
+            <li><a href="#governance">🎪 인지적 거버넌스</a></li>
+            <li><a href="#operations">⭐ 운영의 지능화</a></li>
+            <li><a href="#agent-dev">🤖 에이전트 개발자</a></li>
+            <li><a href="#mcp">🎁 MCP 표준화</a></li>
+            <li><a href="#inference">🔔 추론의 민주화</a></li>
+            <li><a href="#conclusion">🎊 결론</a></li>
         </ul>
     </nav>
 
@@ -528,7 +564,7 @@
     </main>
 
     <footer>
-        <p>2025년 오픈소스 생태계 내 생성형 AI의 통합 | 2025년 12월</p>
+        <p>🎁 2025년 오픈소스 생태계 내 생성형 AI의 통합 | 2025년 크리스마스 🎄</p>
     </footer>
 
     <script>
